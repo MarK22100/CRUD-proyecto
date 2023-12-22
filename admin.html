@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>CRUD Comision80i</title>
 </head>
 <body>
@@ -29,35 +30,37 @@
     </header>
     <main class="container">
         <section class="my-5">
-            <h1 class="text-center">Administrar productos</h1>
+            <h1 id="titulo" class="text-center">Administrar productos</h1>
         </section>
         <section class="container ">
-            <form action="" class="">
-                <div class="my-3"></div>
-                <label  class="form-label" ="codigo">CODIGO</label>
-                <input type="text" id="codigo" class="form-control" placeholder="INGRESE EL CODIGO" minlength="4" maxlength="8" required>
+            <form >
                 <div class="my-3">
-                    <label  class="form-label" ="name">NOMBRE</label>
-                    <input type="text" id="name" class="form-control" placeholder="INGRESE EL NOMBRE" minlength="4" maxlength="50" required>
+                    <label for="codigo" class="form-label" ="codigo">CODIGO</label>
+                    <input type="text" id="codigo" class="form-control" placeholder="INGRESE EL CODIGO" minlength="4" maxlength="8" disabled required>
                 </div>
                 <div class="my-3">
-                    <label for="name"class="form-label" ="name">DESCRIPCION</label>
-                    <textarea id="name" class="form-control" placeholder="INGRESE LA DESCRIPCION" minlength="10" maxlength="20" required></textarea>
+                    <label for="nombre" class="form-label" ="nombre">NOMBRE</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="INGRESE EL NOMBRE" minlength="4" maxlength="50" required>
                 </div>
                 <div class="my-3">
-                    <label for="precio"class="form-label" ="name">PRECIO</label>
+                    <label for="descripcion"class="form-label">DESCRIPCION</label>
+                    <textarea id="descripcion" class="form-control" placeholder="INGRESE LA DESCRIPCION" minlength="10" maxlength="200" required></textarea>
+                </div>
+                <div class="my-3">
+                    <label for="precio"class="form-label" ="precio">PRECIO</label>
                     <input id="precio" class="form-control" placeholder="INGRESE LA PRECIO" minlength="1" maxlength="50" required>
                 </div>
                 <div class="my-3">
-                    <label for="imgProd"class="form-label" ="name">IMAGEN</label>
-                    <input id="imgProd" class="form-control" placeholder="INGRESE IMAGEN DEL PRODUCTO" minlength="1" maxlength="50" required></div>
+                    <label for="imgProd"class="form-label" ="name">URL IMAGEN</label>
+                    <input id="imgProd" class="form-control" placeholder="INGRESE IMAGEN DEL PRODUCTO" minlength="1" maxlength="250" required>
+                </div>
 
-            <button class="btn btn-primary" type="submit">GUARDAR</button>
+                <button class="btn btn-primary" type="submit">GUARDAR</button>
             </form>
         </section>
         <section class="my-5">
             <h2>Tabla de productos</h2>
-            <button type="button" class="btn btn-outline-primary">NUEVO</button>
+            <button type="button" class="btn btn-outline-primary my-5">NUEVO</button>
             <article>
                 <div class="table-responsive">
                     <table class="table">
@@ -72,23 +75,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>PRUEBA</td>
-                                <td>PRUEBA</td>
-                                <td>$1234</td>
-                                <td class="text-wrap">https://www.pexels.com/es-es/foto/blanco-y-negro-hombre-sombrero-en-pie-19415811/</td>
-                                <td class="p-3">
-                                    <button type="button" class="btn btn-warning mb">EDITAR</button>
-                                    <button type="button" class="btn btn-danger">BORRAR</button>
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
             </article>
         </section>
     </main>
-<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="module" src="/js/admin.js"></script>
 </body>
 </html>
